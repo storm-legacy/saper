@@ -1,0 +1,218 @@
+* {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+body {
+  padding: 30px;
+  background: #888;
+  display: flex;
+  justify-content: center;
+}
+.mainMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  text-align: center;
+  z-index: 10;
+}
+.mainMenu .logo{
+  display: flex;
+  height: 100px;
+  margin-bottom: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 100px;
+}
+.logo p {
+  color: #fff;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.logo span {
+  color: #FFF;
+  font-size: 60px;
+  font-family: sans-serif;
+  font-variant: small-caps;
+}
+.mainMenu .config {
+  width: 100vw;
+  margin-top: 100px;
+}
+.mainMenu .config .custom {
+  display: none;
+}
+.mainMenu .config select {
+  display: block;
+  width: 220;
+  height: 30px;
+  margin: 10px auto;
+}
+.mainMenu .config .custom input {
+  margin: 10px auto;
+  width: 50px;
+  padding: 5px;
+  display: block;
+}
+.mainMenu .config button {
+  margin: 10px;
+  width: 120px;
+  height: 40px;
+}
+.mainMenu label {
+  color: #EEE;
+  font-family: sans-serif;
+}
+.gameBox {
+  position: relative;
+}
+.gameBox .gameOverOverlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 5;
+}
+.loseBox {
+  display: none;
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+.loseBox h1{
+  margin-top: 15%;
+  color: #FFF;
+  font-size: 80px;
+  font-variant: small-caps;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 10px #000;
+  width: 100%;
+  text-align: center;
+}
+.loseBox span {
+  display: block;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #EEE;
+  text-shadow: 2px 2px 5px #000;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  text-align: center;
+}
+.winBox {
+  display: none;
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+.winBox h1{
+  margin-top: 15%;
+  color: #FFF;
+  font-size: 80px;
+  font-variant: small-caps;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 10px #000;
+  width: 100%;
+  text-align: center;
+}
+.winBox span {
+  display: block;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #EEE;
+  text-shadow: 2px 2px 5px #000;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  text-align: center;
+}
+.gameBox .timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  width: 250px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: #222;
+}
+.gameBox .timer span{
+  color: white;
+  font-size: 35px;
+  font-family: sans-serif;
+}
+.gameBox .game table {
+  border: 2px solid #FFF;
+  box-shadow: 0px 0px 10px #000;
+}
+.gameBox .game table td, .gameBox .game table tr 
+{
+  width: 35px;
+  height: 35px;
+  padding: 2px;
+  background: #AAA;
+  border: solid 1px #FFF;
+  color: #222;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+.gameBox .game .fa-bomb {
+  font-size: 20px;
+  color: #222;
+}
+
+.gameBox .game table td:hover {
+  background: #CCC;
+}
+.gameBox .game table td.bombFailed:hover {
+  background: #D00;
+}
+.gameBox .game td.safe {
+  background: #FFF;
+  cursor: initial;
+}
+.gameBox .game td.safe:hover {
+  background: #FFF;
+  cursor: initial;
+}
+.gameBox .game .bomb {
+  background: #AAA;
+  /* background: #888; */
+}
+.gameBox .game td.bombFailed {
+  background: #F00;
+}
+.gameBox .game td.flag {
+  background: #222;
+}
+.gameBox .game .flag:hover {
+  background: #111;
+}
+.gameBox .game .fa-flag {
+  font-size: 20px;
+  color: #FFF;
+}

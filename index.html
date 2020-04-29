@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saper by W.P.</title>
+  <link rel="stylesheet" href="misc/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/jquery-3.5.0.min.js"></script>
+  <script src="scripts/game_logic.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+
+<body>
+  <div class="mainMenu">
+    <div class="logo noselect">
+      <img src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/0/03/Homing_Underwater_Mine.png" alt="saper-logo">
+      <p>mini</p>
+      <span>Saper</span>
+    </div>
+    <div class="config">
+      <select name="difficulty" class="difficulty">
+        <option value="1337" selected disabled hidden>Wybierz poziom trudności</option>
+        <option value="1">Łatwy</option>
+        <option value="2">Normalny</option>
+        <option value="3">Trudny</option>
+        <option value="4">Legendarny (DEVEL)</option>
+        <option value="0">Własny (DEVEL)</option>
+      </select>
+      <div class="custom">
+        <input name="cols" type="number">
+        <input name="rows" type="number">
+        <input name="bombs" type="number">  
+      </div>
+      <input type="checkbox" name="showBombs">
+      <label for="showBombs">Pokaż bomby</label>
+      <br>
+      <br>
+      <button>Rozpocznij</button>
+    </div>
+  </div>
+  <div class="gameBox">
+    <div class="gameOverOverlay noselect">
+      <div class="winBox">
+        <h1>Gratulacje!</h1>
+        <span>Udało ci się ukończyć grę! Poniżej znajduje się twój czasowy wynik!</span>
+      </div>
+      <div class="loseBox">
+        <h1>Game Over!</h1>
+        <span>Wciśnij F5 i zacznij od nowa</span>
+      </div>
+    </div>
+    <div class="game">
+      Please enable JavaScript to play this game.
+    </div>
+    <div class="timer noselect">
+      <span>00:00</span>
+    </div>
+  </div>
+</body>
+
+</html>
